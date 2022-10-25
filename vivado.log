@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Oct 25 13:24:23 2022
+# Process ID: 16800
+# Current directory: D:/portfolio/Single RAM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7968 D:\portfolio\Single RAM\Single RAM.xpr
+# Log file: D:/portfolio/Single RAM/vivado.log
+# Journal file: D:/portfolio/Single RAM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/portfolio/Single RAM/Single RAM.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/real/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1074.383 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/portfolio/Single RAM/Single RAM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SingleRAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/portfolio/Single RAM/Single RAM.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_SingleRAM_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/portfolio/Single RAM/Single RAM.srcs/sources_1/imports/new/SingleRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/portfolio/Single RAM/Single RAM.srcs/sim_1/imports/new/tb_SingleRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_SingleRAM
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [D:/portfolio/Single RAM/Single RAM.srcs/sim_1/imports/new/tb_SingleRAM.v:31]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [D:/portfolio/Single RAM/Single RAM.srcs/sim_1/imports/new/tb_SingleRAM.v:37]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/portfolio/Single RAM/Single RAM.sim/sim_1/behav/xsim'
+"xelab -wto cb556168cdfe406d9039a421f769dcb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_SingleRAM_behav xil_defaultlib.tb_SingleRAM xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/real/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto cb556168cdfe406d9039a421f769dcb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_SingleRAM_behav xil_defaultlib.tb_SingleRAM xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SingleRAM
+Compiling module xil_defaultlib.tb_SingleRAM
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_SingleRAM_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1074.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/portfolio/Single RAM/Single RAM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_SingleRAM_behav -key {Behavioral:sim_1:Functional:tb_SingleRAM} -tclbatch {tb_SingleRAM.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_SingleRAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1074.383 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SingleRAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1074.383 ; gain = 0.000
